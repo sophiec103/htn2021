@@ -20,7 +20,7 @@
 
 <body>
     <!-- nav bar -->
-    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <nav class="navbar navy" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
                 <img src="./pjs logo.png" width="59" height="28">
@@ -34,42 +34,69 @@
         </div>
         <div id="navbarI" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="main.html">
+                <a class="navbar-item white" href="main.html">
                     Home
                 </a>
-                <a class="navbar-item" href="send.html">
+                <a class="navbar-item white" href="send.html">
                     Send a Message
                 </a>
-                <a class="navbar-item" href="receive.html">
+                <a class="navbar-item white" href="receive.html">
                     Receive a Message
                 </a>
             </div>
         </div>
     </nav>
 
+    <section id="header" class="hero navy has-text-centered">
+        <div class="hero-body">
+            <p class="title white">
+                Send Messages
+            </p>
+            <p class="subtitle white" id="welcome">
+                Leave a nice message to make someone's day!
+            </p>
+        </div>
+    </section>
 
     <!--card-->
     <br>
     <div class="columns">
-    <div class="column is-half is-offset-one-quarter">
-    <div class="card">
-        <div class="card-content">
-            <div class="content">
-                    <span class="file-icon">
-                        <i class="fas fa-quote-left"></i>
-                    </span>
-                <input class="input is-medium" id="message-title" type="text" placeholder="Add a title :D">
-                <br> <br>
-                <textarea class="textarea is-medium" id="message-content" placeholder="Leave a message here!"></textarea>
-                <br>
+        <div class="column is-half is-offset-one-quarter">
+            <div class="card">
+                <div class="card-content">
+                    <div class="content">
+
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input is-medium" id="message-title" type="text" placeholder="Add a title :D">
+                            <span class="icon is-small is-left">
+                             <!-- <i class="fas fa-quote-left"></i> -->
+                             <i class="fas fa-envelope-open-text"></i>
+                            </span>
+                        </p>
+                        <textarea class="textarea is-medium" id="message-content" placeholder="Leave a message here!"></textarea>
+                        <br>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    </div>
-    </div>
     <div class="columns">
-    <div class="column is-one-fifth is-offset-one-quarter">
-        <button id="send-button" class="button" onclick="handleSubmit()">Send</button>
+        <div class="column is-one-fifth is-offset-one-quarter">
+            <button id="send-button" class="button" onclick="handleSubmit()">Send</button>
+        </div>
     </div>
+
+
+
+    <div class="field">
+    <p class="control has-icons-left has-icons-right">
+        <input class="input" type="email" placeholder="Email">
+        <span class="icon is-small is-left">
+        <i class="fas fa-quote-left"></i>
+        </span>
+        <span class="icon is-small is-right">
+        <i class="fas fa-check"></i>
+        </span>
+    </p>
     </div>
 </body>
