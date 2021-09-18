@@ -13,9 +13,16 @@
   display: flex;
 }
 
+html, body {
+    height:100%;
+} 
 
 .periwinkle{
-    background-color: #CCCCFF;
+    background-color: #e5e5ff !important;
+}
+
+.rose{
+    background-color: #ffe5ef !important;
 }
 
 .white{
