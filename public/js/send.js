@@ -29,7 +29,7 @@ const handleSubmit = () => {
         const mins = d.getMinutes(); //Get the minute (0-59)
         const time = d.getTime();
         let created = "";
-        if (mins>=10) created = day + "/" + month + "/" + year + " at " + hour + ":" + mins;
+        if (mins>=10) created = day + "/" + month + "/" + year + ", " + hour + ":" + mins;
         else created = day + "/" + month + "/" + year + ", " + hour + ":0" + mins;
 
         if(anon) name = "Anonymous"
