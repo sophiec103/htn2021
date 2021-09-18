@@ -35,6 +35,7 @@ const handleSubmit = () => {
             title: title.value,
             content: content.value,
             created: created,
+            author: googleUser.uid,
             time: time
         })
             // 3. Clear the form so that we can write a new note
