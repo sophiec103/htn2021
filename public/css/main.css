@@ -9,6 +9,14 @@ html, body {
     height:100%;
 } 
 
+#head-title {
+    font-size: 45px !important;
+}
+
+#head-sub, #welcome{
+    font-size: 25px !important;
+}
+
 .periwinkle{
     background-color: #e5e5ff !important;
 }
