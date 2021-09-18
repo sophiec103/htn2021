@@ -1,3 +1,15 @@
 .periwinkle{
     background-color: #CCCCFF;
 }
+
+.white{
+    color: white !important; 
+}
+
+.navbar-item:hover{
+    color: #040047 !important;
+}
+
+.navy{
+    background-color: #040047 !important;
+}
