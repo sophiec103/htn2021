@@ -7,17 +7,7 @@ window.onload = (event) => {
         if (user) {
             console.log('Logged in as: ' + user.displayName);
             googleUser = user;
-            const userData = firebase.database().ref(`users/${user.uid}`);
-            userData.on('value', (snapshot) => {
-                const data = snapshot.val();
-                console.log(data)
-                for (const id in data) {
-                    if(id == "name"){
-                        document.querySelector("#welcome").innerHTML = "Welcome, "+ data[id];
-                    }
-                }
-                updateCards();
-            });
+            document.querySelector("#welcome").innerHTML = "Welcome, "+ user.displayName.split(" ")[0];
         } else {
             window.location = 'index.html'; // If not logged in, navigate back to login page.
         }

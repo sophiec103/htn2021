@@ -7,7 +7,7 @@
     <title>Main</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <script src="js/send.js" defer></script>
+    <script src="js/receive.js" defer></script>
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/8.3.1/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
@@ -19,7 +19,8 @@
 </head>
 
 <body>
-    <!-- nav bar -->
+
+<!-- nav bar -->
     <nav class="navbar navy" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
@@ -53,39 +54,17 @@
     <section id="header" class="hero navy has-text-centered">
         <div class="hero-body">
             <p class="title white">
-                Send Messages
+                My Messages
             </p>
             <p class="subtitle white" id="welcome">
-                Leave a nice message to make someone's day!
+                View and update previous messages!
             </p>
         </div>
     </section>
+    
 
     <!--card-->
     <br>
     <div class="columns">
-        <div class="column is-half is-offset-one-quarter">
-            <div class="card">
-                <div class="card-content">
-                    <div class="content">
-
-                        <p class="control has-icons-left has-icons-right">
-                            <input class="input is-medium" id="message-title" type="text" placeholder="Add a title :D">
-                            <span class="icon is-small is-left">
-                             <!-- <i class="fas fa-quote-left"></i> -->
-                             <i class="fas fa-envelope-open-text"></i>
-                            </span>
-                        </p>
-                        <textarea class="textarea is-medium" id="message-content" placeholder="Leave a message here!"></textarea>
-                        <br>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="columns">
-        <div class="column is-one-fifth is-offset-one-quarter">
-            <button id="send-button" class="button" onclick="handleSubmit()">Send</button>
-        </div>
     </div>
 </body>

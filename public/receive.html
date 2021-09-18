@@ -20,7 +20,7 @@
 
 <body>
     <!-- nav bar -->
-    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <nav class="navbar navy" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
                 <img src="./pjs logo.png" width="59" height="28">
@@ -34,17 +34,58 @@
         </div>
         <div id="navbarI" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="main.html">
+                <a class="navbar-item white" href="main.html">
                     Home
                 </a>
-                <a class="navbar-item" href="send.html">
+                <a class="navbar-item white" href="send.html">
                     Send a Message
                 </a>
-                <a class="navbar-item" href="receive.html">
+                <a class="navbar-item white" href="receive.html">
                     Receive a Message
+                </a>
+                <a class="navbar-item white" href="mymessages.html">
+                    View my Messages
                 </a>
             </div>
         </div>
     </nav>
     
+    <section id="header" class="hero navy has-text-centered">
+        <div class="hero-body">
+            <p class="title white">
+                Recieve Messages
+            </p>
+            <p class="subtitle white" id="welcome">
+                Feeling down? Look no further!
+            </p>
+        </div>
+    </section>
+
+    <!--card-->
+    <br>
+    <div class="columns">
+    <div class="column is-half is-offset-one-quarter">
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <div class="field">
+                <h2 class="is-medium" id="mes-title">
+                    <span class="is-small is-left">
+                        <i class="fas fa-quote-left"></i>
+                    </span>
+                </h2>
+                </div>
+                <br> <br>
+                <p class="is-medium" id="mes-content"></p>
+                <br>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="columns">
+         <div class="column is-one-fifth is-offset-one-quarter">
+             <button id="send-button" class="button" onclick="getMessage()">Receive</button>
+         </div>
+     </div>
 </body>
