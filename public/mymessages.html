@@ -7,7 +7,7 @@
     <title>Main</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <script src="js/receive.js" defer></script>
+    <script src="js/mymessages.js" defer></script>
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/8.3.1/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
@@ -65,6 +65,32 @@
 
     <!--card-->
     <br>
-    <div class="columns">
+    <section class="m-5">
+    <div class="columns is-multiline">
+    </div>
+    </section>
+
+    <!--modal to edit messages-->
+    <div id="editModal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Edit Message</p>
+            </header>
+            <section class="modal-card-body">
+                <b><p class="mb-1">Title</p></b>
+                <input class="input is-normal" id="editTitle" type="text">
+                <br>
+                <b><p class="mt-4 mb-1">Message</p></b>
+                <textarea class="textarea is-normal" id="editText" type="text"></textarea>
+                <input id="id" type="hidden">
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-outlined is-success" onclick="saveMessage()">
+                    Save changes
+                </button>
+                <button class="button is-outlined is-danger" onclick="closeModal()">Cancel</button>
+            </footer>
+        </div>
     </div>
 </body>

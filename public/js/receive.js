@@ -40,9 +40,8 @@ const renderDataAsHtml = (data) => {
       if (counter==randomNum){
       const message = messages[key];
         document.querySelector("#mes-title").innerHTML = message.title;
-        document.querySelector("#mes-content").innerHTML = message.content;
-        console.log(message.title);
-        setRandomColor();
+        document.querySelector("#mes-content").innerHTML = message.content + `<br><br><br><i>~${message.name}`;
+        // setRandomColor();
     }    
   }
 };
@@ -56,103 +55,6 @@ function createNewLine(text){
        text = t;
    }
    return text;
-}
-
-let counter = 0;
-const createCard = (note, id) => {
-   counter++;
-   const text = createNewLine(note.text);
-   let s = ``;
-   s += `
-     <div class="column is-one-quarter">
-       <div class="card" id="id${counter}">
-         <header class="card-header">
-           <p class="card-header-title">${note.title}</p>
-         </header>
-         <div class="card-content">
-           <div class="content">${text}</div>
-            `
-
-    for (let i = 0; i<note.labels.length; i++){
-        s += `<span class="tag is-light is-info"> 
-                ${note.labels[i]}
-              </span> &nbsp`
-    }
-
-    s += ` <div class="content"><i>Created by ${name} <br> on ${note.created}</i></div>
-           </div>
-         <footer class = "card-footer">
-            <a 
-                href = "#" 
-                class = "card-footer-item" 
-                onclick = "editNote('${id}')">
-                Edit
-           </a>
-           <a 
-                href = "#" 
-                class = "card-footer-item" 
-                onclick = "archiveNote('${id}')">
-                Archive
-           </a>
-           <a  
-                href = "#" 
-                class = "card-footer-item" 
-                onclick = "deleteNote('${id}')">
-                Delete
-           </a>
-         </footer>
-       </div>
-     </div>
-   `;
-   return s;
-};
-
-function deleteNote(id){
-    if (confirm("Are you sure you want to delete this note?")){
-      firebase.database().ref(`users/${googleUserId}/${id}`).remove();
-    }
-}
-
-const editNote = (id) => {
-  const editNoteModal = document.querySelector('#editNoteModal');
-  const notesRef = firebase.database().ref(`users/${googleUserId}/${id}`);
-  notesRef.on('value', (snapshot) => {
-    // const data = snapshot.val();
-    // const noteDetails = data[noteId];
-    // document.querySelector('#editTitleInput').value = noteDetails.title;
-    // document.querySelector('#editTextInput').value = noteDetails.text;
-    const note = snapshot.val();
-    document.querySelector('#editTitleInput').value = note.title;
-    document.querySelector('#editTextInput').value = note.text;
-    let labels = "";
-    for (let i = 0; i<(note.labels).length-1; i++){
-        labels += note.labels[i] + ", ";
-    }
-    labels += note.labels[(note.labels).length-1];
-    document.querySelector('#editLabelInput').value = labels;
-    document.querySelector('#messageId').value = id;
-  });
-  editNoteModal.classList.toggle('is-active');
-};
-
-function saveEditedNote(){
-    const title = document.querySelector('#editTitleInput').value;
-    const text = document.querySelector('#editTextInput').value;
-    const label = document.querySelector('#editLabelInput').value;
-    const messageId = document.querySelector('#messageId').value;
-    // const editedNote = {
-    //     title: title,
-    //     text: text
-    // }
-    labels = label.split(", ");
-    const editedNote = {title, text, labels}; //shorted way for above when the var names are repeated
-    firebase.database().ref(`messages/${noteId}`).update(editedNote);
-    closeEditModal();
-}
-
-function closeEditModal(){
-  const editNoteModal = document.querySelector('#editNoteModal');
-  editNoteModal.classList.toggle('is-active');
 }
 
 function getRandomColor() {
