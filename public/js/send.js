@@ -17,6 +17,8 @@ const handleSubmit = () => {
   // 1. Capture the form data
     const title = document.querySelector('#message-title');
     const content = document.querySelector('#message-content');
+    const anon = document.querySelector('#anonymous').checked;
+    let name = "";
 
     if (title.value != "") {
         const d = new Date();
@@ -28,7 +30,10 @@ const handleSubmit = () => {
         const time = d.getTime();
         let created = "";
         if (mins>=10) created = day + "/" + month + "/" + year + " at " + hour + ":" + mins;
-        else created = day + "/" + month + "/" + year + " at " + hour + ":0" + mins;
+        else created = day + "/" + month + "/" + year + ", " + hour + ":0" + mins;
+
+        if(anon) name = "Anonymous"
+        else name = googleUser.displayName.split(" ")[0];
 
         // 2. Format the data and write it to our database
         firebase.database().ref(`messages`).push({
@@ -36,12 +41,14 @@ const handleSubmit = () => {
             content: content.value,
             created: created,
             author: googleUser.uid,
+            name: name,
             time: time
         })
             // 3. Clear the form so that we can write a new note
             .then(() => {
                 title.value = "";
                 content.value = "";
+                document.querySelector('#anonymous').checked = false;
             });
     }
 }
