@@ -1,3 +1,11 @@
+.is-overlay {
+  align-items: center;
+  justify-content: center;
+  color: black;
+  display: flex;
+}
+
+
 .periwinkle{
     background-color: #CCCCFF;
 }
