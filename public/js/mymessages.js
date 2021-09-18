@@ -128,7 +128,8 @@ function saveEditedNote(){
     const title = document.querySelector('#editTitleInput').value;
     const text = document.querySelector('#editTextInput').value;
     const noteId = document.querySelector('#noteId').value;
-    firebase.database().ref(`users/${googleUserId}/${noteId}`).update(editedNote);
+    const editedNote = {title, text, labels}; //shorted way for above when the var names are repeated
+    firebase.database().ref(`messages/${noteId}`).update(editedNote);
     closeEditModal();
 }
 
