@@ -1,0 +1,66 @@
+.is-overlay {
+  align-items: center;
+  justify-content: center;
+  color: black;
+  display: flex;
+}
+
+.blue{
+    background-color: lavender !important;
+}
+
+@font-face {
+	font-family: "Open Sans";
+	src: url(yoururl);
+}
+
+/**{
+    padding: 0;
+    margin: 0;
+
+}
+
+body{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: #c4a1a2
+}
+
+.content-wrapper{
+    width:80%;
+    margin: 4% 10% 5% 10%;
+}
+
+.content-wrapper img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.text-wrapper{
+    width:100%;
+    position: relative;
+    margin-top: -40%;
+}
+
+.text-wrapper h1{
+    text-align: center;
+    color: #ffffff;
+    font-size: 10vw;
+    font-family: 'lobster';
+}
+
+
+    <div class="content-wrapper">
+        <img src="./whiterainbow-removebg-preview (1).png" class="center"
+        <div class="text-wrapper">
+            <h1>Sample</h1>
+        </div>
+    </div>
+
+<figure class="image is-5by3">
+                            <img src=https://i.pinimg.com/originals/61/22/f5/6122f5b722ccee0c89ac2e3e9fe969cb.jpg>
+                        </figure>
+
