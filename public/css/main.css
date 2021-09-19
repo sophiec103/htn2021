@@ -12,11 +12,11 @@ html {
 } 
 
 #head-title {
-    font-size: 45px !important;
+    font-size: 55px !important;
 }
 
 #head-sub, #welcome{
-    font-size: 25px !important;
+    font-size: 30px !important;
 }
 
 .periwinkle{
@@ -50,4 +50,51 @@ html {
 
 #send-envelope, #receive-envelope{
     font-size: 65px !important;
+#sendenvelope, #receiveenvelope{
+    font-size: 60px !important;
+}
+
+#teamsymbol{
+    font-size:250px !important;
+}
+
+.gradient{
+    background: hsla(240, 100%, 90%, 1);
+
+    background: linear-gradient(0deg, hsla(240, 100%, 90%, 1) 0%, hsla(282, 57%, 88%, 1) 50%, hsla(338, 100%, 92%, 1) 100%);
+
+    background: -moz-linear-gradient(0deg, hsla(240, 100%, 90%, 1) 0%, hsla(282, 57%, 88%, 1) 50%, hsla(338, 100%, 92%, 1) 100%);
+
+    background: -webkit-linear-gradient(0deg, hsla(240, 100%, 90%, 1) 0%, hsla(282, 57%, 88%, 1) 50%, hsla(338, 100%, 92%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ccccff", endColorstr="#e8d0f2", GradientType=1 );}
+
+#divider{
+    background-color: gradient;
+    font-size: 5px
+}
+
+.custom-shape-divider-bottom-1632021305 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1632021305 svg {
+    position: relative;
+    display: block;
+    width: calc(131% + 1.3px);
+    height: 123px;
+}
+
+.custom-shape-divider-bottom-1632021305 .shape-fill {
+    fill: #FFD4E4;
+}
+
+.ispink{
+    background-color:#FFD4E4
 }
