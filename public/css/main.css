@@ -48,6 +48,8 @@ html {
     margin-right: auto !important;
 }
 
+#send-envelope, #receive-envelope{
+    font-size: 65px !important;
 #sendenvelope, #receiveenvelope{
     font-size: 60px !important;
 }
