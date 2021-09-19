@@ -53,7 +53,7 @@
     <section id="header" class="hero navy has-text-centered">
         <div class="hero-body">
             <p class="title white" id="head-title">
-                Recieve Messages
+                Receive Messages
             </p>
             <p class="subtitle white" id="head-sub">
                 Feeling down? Look no further!
@@ -67,17 +67,26 @@
     <div class="columns">
     <div class="column is-half is-offset-one-quarter">
     <div class="card">
-        <div class="card-content">
+        <div class="card-content m-4">
             <div class="content">
                 <div class="field">
-                <h2 class="is-medium" id="mes-title">
-                    <span class="is-small is-left">
-                        <i class="fas fa-quote-left"></i>
-                    </span>
+                <h2 class="is-medium">
+                    <div class="columns">
+                         <div class="column is-1">
+                             <span class="is-small is-left">
+                                <i class="fas fa-quote-left"></i>
+                             </span>
+                         </div>
+                        <div class="column is-11" id="mes-title"></div>
+                    </div>
                 </h2>
                 </div>
                 <br> <br>
-                <p class="is-medium" id="mes-content"></p>
+                <div class="columns">
+                         <div class="column is-1">
+                         </div>
+                        <div class="column is-11 is-medium" id="mes-content"></div>
+                </div>
                 <br>
             </div>
         </div>
@@ -86,8 +95,8 @@
     </div>
     <div class="columns is-centered">
          <div class="column is-one-fifth">
-             <button id="receive-button" class="button" onclick="getMessage()">
-                <img src="./receive white.png" width="90" height="50">
+             <button id="receive-button" class="button mt-3" onclick="getMessage()">
+                <i class="fas fa-envelope-open-text" id="receive-envelope"></i>
             </button>
          </div>
      </div>

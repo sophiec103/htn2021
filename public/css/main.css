@@ -47,3 +47,7 @@ html {
     margin-left: auto !important;
     margin-right: auto !important;
 }
+
+#send-envelope, #receive-envelope{
+    font-size: 65px !important;
+}

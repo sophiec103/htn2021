@@ -40,8 +40,7 @@ const renderDataAsHtml = (data) => {
       if (counter==randomNum){
       const message = messages[key];
         document.querySelector("#mes-title").innerHTML = message.title;
-        document.querySelector("#mes-content").innerHTML = message.content + `<br><br><br><i>~${message.name}`;
-        // setRandomColor();
+        document.querySelector("#mes-content").innerHTML = createNewLine(message.content) + `<br><br><br><i>~${message.name}`;
     }    
   }
 };
