@@ -72,7 +72,7 @@ html {
     font-size: 5px
 }
 
-.custom-shape-divider-bottom-1632021305 {
+.custom-shape-divider-bottom-1632022926 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -82,17 +82,27 @@ html {
     transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1632021305 svg {
+.custom-shape-divider-bottom-1632022926 svg {
     position: relative;
     display: block;
-    width: calc(131% + 1.3px);
-    height: 123px;
+    width: calc(145% + 1.3px);
+    height: 111px;
 }
 
-.custom-shape-divider-bottom-1632021305 .shape-fill {
-    fill: #FFD4E4;
+.custom-shape-divider-bottom-1632022926 .shape-fill {
+    fill: #E8D0F2;
 }
 
 .ispink{
     background-color:#FFD4E4
 }
+
+.ispurple{
+    background-color:#E8D0F2
+}
+
+
+.isperiwinkle{
+    background-color:#CCCCFF
+}
+
