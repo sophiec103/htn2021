@@ -111,11 +111,11 @@ const editMessage = (id) => {
 
 function saveMessage(){
     const title = document.querySelector('#editTitle').value;
-    const text = document.querySelector('#editText').value;
+    const content = document.querySelector('#editText').value;
     const id = document.querySelector('#id').value;
-    const editedNote = {title, text}; //shorted way for above when the var names are repeated
-    firebase.database().ref(`messages/${id}`).update(editedNote);
-    closeEditModal();
+    const editedMessage = {title, content}; //shorted way for above when the var names are repeated
+    firebase.database().ref(`messages/${id}`).update(editedMessage);
+    closeModal();
 }
 
 function closeModal(){
